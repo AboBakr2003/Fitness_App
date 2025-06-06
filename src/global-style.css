@@ -24,7 +24,13 @@
 }
 
 @layer components {
+  .nav-bar {
+    @apply fixed top-0 z-30 w-full py-4 transition duration-200
+  }
   .nav-link {
     @apply transition duration-200 hover:text-primary-300 no-underline text-gray-500 mx-5 cursor-pointer
+  }
+  .menu-item {
+    @apply transition duration-200 hover:text-primary-500 no-underline text-gray-500 mx-5 cursor-pointer
   }
 }

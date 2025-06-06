@@ -22,3 +22,9 @@
   --screens-sm: 768px;
   --screens-md: 1060px;
 }
+
+@layer components {
+  .nav-link {
+    @apply transition duration-200 hover:text-primary-300 no-underline text-gray-500 mx-5 cursor-pointer
+  }
+}

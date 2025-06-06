@@ -1,6 +1,6 @@
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import "../../../global-style.css"
-import { SelectedPage } from "../../../types"
+import { SelectedPage } from "../../../shared/types"
 
 type Props = {
   page: string,

@@ -1,5 +1,5 @@
 import Navbar from "./components/navbar/navbar" 
-import { SelectedPage } from "./types"
+import { SelectedPage } from "./shared/types"
 import { useState, useEffect } from "react"
 
 export default function App() {

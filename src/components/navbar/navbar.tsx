@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Logo from "../../assets/Logo.png";
 import Link from "./link/link";
-import { SelectedPage } from "../../types";
+import { SelectedPage } from "../../shared/types";
 import useMediaQuery from "../../hooks/useMediaQuery";
-import ActionButton from "../action-button/action-button";
+import ActionButton from "../../shared/action-button/action-button";
 
 type Props = {
   selectedPage: SelectedPage;

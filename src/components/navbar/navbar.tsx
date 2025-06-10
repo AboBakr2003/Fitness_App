@@ -4,7 +4,7 @@ import Logo from "../../assets/Logo.png";
 import Link from "./link/link";
 import { SelectedPage } from "../../shared/types";
 import useMediaQuery from "../../hooks/useMediaQuery";
-import ActionButton from "../../shared/action-button/action-button";
+import ActionButton from "../../shared/action-button";
 
 type Props = {
   selectedPage: SelectedPage;
@@ -51,7 +51,7 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
                   />
                 </div>
                 <div className={`${flexBetween} gap-2`}>
-                  <p className="nav-link">Sign In</p>
+                  <p className="nav-links">Sign In</p>
                   <ActionButton setSelectedPage={setSelectedPage}>
                     Become a Member
                   </ActionButton>
@@ -62,7 +62,7 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
                 className="rounded-full bg-secondary-500 p-2 cursor-pointer"
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
               >
-                <Bars3Icon className="h-6 w-6 text-gray-500"/>
+                <Bars3Icon className="h-5 w-5 text-gray-500"/>
               </button>
             )}
           </div>

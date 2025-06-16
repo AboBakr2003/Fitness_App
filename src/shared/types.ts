@@ -4,3 +4,15 @@ export const enum SelectedPage {
     OurClasses = "our-classes",
     ContactUs = "contact-us",
 }
+
+export interface BenefitType {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+export interface ClassType {
+  name: string;
+  description?: string;
+  image: string;
+}

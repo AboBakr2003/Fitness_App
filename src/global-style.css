@@ -14,13 +14,6 @@
   --background-mobile-home: url("./assets/HomePageGraphic.png");
   --font-dm-sans: "DM Sans", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
-  --content-evolve-text: "url('./assets/EvolveText.png')";
-  --content-abstract-waves: "url('./assets/AbstractWaves.png')";
-  --content-sparkles: "url('./assets/Sparkles.png')";
-  --content-circles: "url('./assets/Circles.png')";
-  --screens-xs: 480px;
-  --screens-sm: 768px;
-  --screens-md: 1024px;
 }
 
 @layer components {

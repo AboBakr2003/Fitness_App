@@ -5,6 +5,7 @@ import Link from "./link/link";
 import { SelectedPage } from "../../shared/types";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import ActionButton from "../../shared/action-button";
+import { motion, AnimatePresence } from "framer-motion";
 
 type Props = {
   selectedPage: SelectedPage;
@@ -22,7 +23,7 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
     <nav>
       <div className={`${flexBetween} ${navbarBackground}`}>
         <div className={`${flexBetween} mx-auto w-5/6`}>
-          <div className={`${flexBetween} w-full gap-16`}>
+          <div className={`${flexBetween} w-full gap-12`}>
             {/* LEFT SIDE */}
             <img alt="logo" src={Logo}/>
             {/* RIGHT SIDE */}
@@ -70,14 +71,26 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
       </div>
 
       {/* MOBILE MENU MODAL */}
+      <AnimatePresence>
       {!isAboveMediumScreens && isMenuToggled && (
-        <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl">
+        <motion.div
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.3 }}
+        variants={{
+          hidden: { opacity: 0, x: 50 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        className="fixed right-0 bottom-0 z-40 h-full w-[200px] bg-primary-100 drop-shadow-xl"
+        >
           {/* CLOSE ICON */}
-          <div className="flex justify-end m-4 mb-8">
+          <div className="flex justify-end mx-4 mb-8 mt-3">
             <button 
             className="rounded-full bg-secondary-500 p-2 cursor-pointer"
             onClick={() => setIsMenuToggled(!isMenuToggled)}>
-              <XMarkIcon className="h-6 w-6 text-gray-500" />
+              <XMarkIcon className="h-5 w-5 text-gray-500" />
             </button>
           </div>
 
@@ -104,8 +117,9 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
               setSelectedPage={setSelectedPage}
             />
           </div>
-        </div>
+        </motion.div>
       )}
+      </AnimatePresence>
     </nav>
   );
 };

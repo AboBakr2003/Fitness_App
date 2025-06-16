@@ -1,6 +1,6 @@
 import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from "@heroicons/react/24/solid"
 import type { SelectedPage, BenefitType } from "../../shared/types";
-import HeaderText from "../../shared/headerText";
+import HeaderText from "../../shared/header-text";
 import { motion } from "framer-motion";
 import Card from "./cards";
 import BenefitsImage from "../../assets/BenefitsPageGraphic.png"
@@ -83,7 +83,7 @@ export default function Benefits({ setSelectedPage }: Props) {
         </motion.div>
       </div>
       {/* BENEFITS IMAGE AND DESCRIPTION */}
-      <div className="flex flex-col lg:flex-row gap-6 lg:gap-14">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-25">
         {/* BENEFITS IMAGE */}
         <motion.div
           className="flex justify-center lg:justify-start lg:w-1/3"
@@ -96,11 +96,11 @@ export default function Benefits({ setSelectedPage }: Props) {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <img alt="benefits-image" src={BenefitsImage}/>
+          <img className="object-contain" alt="benefits-image" src={BenefitsImage}/>
         </motion.div>
         {/* BENEFITS DESCRIPTION */}
         <motion.div
-          className=" relative flex flex-col justify-center gap-8 lg:w-4/6 text-gray-500 py-10"
+          className=" relative flex flex-col justify-center gap-2 lg:gap-4 lg:w-4/6 text-gray-500 py-10"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -111,7 +111,7 @@ export default function Benefits({ setSelectedPage }: Props) {
           }}
         >
           {isAboveMediumScreens && <img 
-            className="w-1/8 absolute 2xl:-translate-y-40 lg:-translate-y-42 -translate-x-16" 
+            className="2xl:w-1/8 lg:w-1/7 w-1/8 absolute 2xl:-translate-y-36 lg:-translate-y-45 lg:-translate-x-16" 
             alt="abstract-waves" 
             src={AbstractWaves}/>}
           <div>
@@ -135,7 +135,7 @@ export default function Benefits({ setSelectedPage }: Props) {
             </p>
           </div>
           {isAboveMediumScreens && <img 
-            className="w-1/8 absolute translate-y-26 2xl:translate-x-150 lg:translate-x-120" 
+            className="w-1/8 absolute 2xl:translate-x-150 2xl:translate-y-30 lg:translate-x-120 lg:translate-y-32" 
             alt="sparkles" 
             src={Sparkles}/>
           }

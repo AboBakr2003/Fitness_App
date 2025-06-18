@@ -2,7 +2,7 @@ import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from "@heroicons/react
 import type { SelectedPage, BenefitType } from "../../shared/types";
 import HeaderText from "../../shared/header-text";
 import { motion } from "framer-motion";
-import Card from "./cards";
+import Card from "./card";
 import BenefitsImage from "../../assets/BenefitsPageGraphic.png"
 import AbstractWaves from "../../assets/AbstractWaves.png"
 import Sparkles from "../../assets/Sparkles.png"
@@ -110,7 +110,13 @@ export default function Benefits({ setSelectedPage }: Props) {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          {isAboveMediumScreens && <img 
+          {isAboveMediumScreens && <motion.img 
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+                duration: 0.5,
+                delay: 1,
+            }}
             className="2xl:w-1/8 lg:w-1/7 w-1/8 absolute 2xl:-translate-y-36 lg:-translate-y-45 lg:-translate-x-16" 
             alt="abstract-waves" 
             src={AbstractWaves}/>}
@@ -134,7 +140,13 @@ export default function Benefits({ setSelectedPage }: Props) {
               enim mattis odio in risus nunc.
             </p>
           </div>
-          {isAboveMediumScreens && <img 
+          {isAboveMediumScreens && <motion.img 
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.5,
+              delay: 1,
+            }}
             className="w-1/8 absolute 2xl:translate-x-150 2xl:translate-y-30 lg:translate-x-120 lg:translate-y-32" 
             alt="sparkles" 
             src={Sparkles}/>

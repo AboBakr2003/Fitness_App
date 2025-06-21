@@ -53,14 +53,10 @@ const classes: Array<ClassType> = [
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
-  hoveredIndex: number | null;
-  setHoveredIndex: (index: number | null) => void;
 };
 
 export default function OurClasses({ setSelectedPage }: Props) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  
-
   return (
     <section id="our-classes" className="flex flex-col bg-primary-100 gap-10 py-18">
       <motion.div
@@ -104,7 +100,7 @@ export default function OurClasses({ setSelectedPage }: Props) {
                   className="w-full h-64 object-cover rounded-md"
                 />
                   <motion.div
-                    className="absolute rounded-md inset-0 bg-primary-500/70 flex flex-col justify-center items-center text-white p-4 z-10"
+                    className="absolute rounded-md inset-0 bg-primary-500/80 flex flex-col justify-center items-center text-white p-4 z-10"
                     animate={{ opacity: hoveredIndex === index ? 1 : 0 }}
                     initial={false}
                     transition={{ duration: 0.3 }}

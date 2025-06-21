@@ -1,5 +1,5 @@
 import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from "@heroicons/react/24/solid"
-import type { SelectedPage, BenefitType } from "../../shared/types";
+import { SelectedPage, type BenefitType } from "../../shared/types";
 import HeaderText from "../../shared/header-text";
 import { motion } from "framer-motion";
 import Card from "./card";
@@ -46,6 +46,7 @@ export default function Benefits({ setSelectedPage }: Props) {
           className="flex flex-col gap-4 lg:w-4/6 text-gray-500"
           initial="hidden"
           whileInView="visible"
+          onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
           variants={{

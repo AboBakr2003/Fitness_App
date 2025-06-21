@@ -9,7 +9,7 @@ type Props = {
 }
 
 export default function Link({page, selectedPage, setSelectedPage}: Props) {
-  const navigate = page.toLowerCase().replace(/ /g, "-") as SelectedPage
+  const navigate = page.toLowerCase().replace(/ /g, "-") as SelectedPage  
   return (
     <AnchorLink 
     className={`nav-links ${selectedPage === navigate && "text-primary-500"}`} 

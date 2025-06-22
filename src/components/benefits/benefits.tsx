@@ -114,6 +114,7 @@ export default function Benefits({ setSelectedPage }: Props) {
           {isAboveMediumScreens && <motion.img 
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{
                 duration: 0.5,
                 delay: 1,
@@ -144,6 +145,7 @@ export default function Benefits({ setSelectedPage }: Props) {
           {isAboveMediumScreens && <motion.img 
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{
               duration: 0.5,
               delay: 1,

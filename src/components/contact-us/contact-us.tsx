@@ -145,7 +145,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ delay: 0.5, duration: 0.5 }}
           variants={{
-            hidden: { opacity: 0, x: 50 },
+            hidden: { opacity: 0, x: 0 },
             visible: { opacity: 1, x: 0 },
           }}
           className="lg:w-xs 2xl:w-auto"

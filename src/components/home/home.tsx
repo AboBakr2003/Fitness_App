@@ -17,7 +17,7 @@ type Props = {
 export default function Home({ setSelectedPage }: Props) {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1024px)");
   return (
-    <section id="home" className="flex flex-col pt-22 lg:pt-26 2xl:pt-32 justify-center lg:justify-end lg:gap-14.5 2xl:gap-25.5">
+    <section id="home" className="flex flex-col pt-22 lg:pt-26 2xl:pt-32 justify-center lg:justify-end lg:gap-16.5 2xl:gap-27.5">
       {/* MAIN HEADER AND IMAGE */}
       <motion.div 
         className="flex flex-col mx-auto w-5/6 gap-12 lg:gap-0 justify-between lg:flex-row"
